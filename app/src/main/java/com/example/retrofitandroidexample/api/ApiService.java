@@ -27,4 +27,7 @@ public interface ApiService {
                                    @Query("source") String source,
                                    @Query("format") int format);
 
+    @GET("api/live?access_key=843d4d34ae72b3882e3db642c51e28e6&currencies=VND&source=USD&format=1")
+    Call<Currency> convertUsdToVnd1();
+
 }

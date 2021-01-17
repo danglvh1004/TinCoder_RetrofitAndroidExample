@@ -48,10 +48,11 @@ public class MainActivity extends AppCompatActivity {
     private void clickCallApi() {
 
         //Link API: http://apilayer.net/api/live?access_key=843d4d34ae72b3882e3db642c51e28e6&currencies=VND&source=USD&format=1
-        ApiService.apiServie.convertUsdToVnd("843d4d34ae72b3882e3db642c51e28e6",
-                "VND",
-                "USD",
-                1).enqueue(new Callback<Currency>() {
+//        ApiService.apiServie.convertUsdToVnd("843d4d34ae72b3882e3db642c51e28e6",
+//                "VND",
+//                "USD",
+//                1).enqueue(new Callback<Currency>() {
+        ApiService.apiServie.convertUsdToVnd1().enqueue(new Callback<Currency>() {
             @Override
             public void onResponse(Call<Currency> call, Response<Currency> response) {
                 Toast.makeText(MainActivity.this, "Call Api Success", Toast.LENGTH_SHORT).show();
