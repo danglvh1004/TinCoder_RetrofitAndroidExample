@@ -1,4 +1,4 @@
-package com.example.retrofitandroidexample;
+package com.example.retrofitandroidexample.model;
 
 import com.google.gson.annotations.SerializedName;
 

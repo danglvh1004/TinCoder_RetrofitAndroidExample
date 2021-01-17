@@ -1,4 +1,4 @@
-package com.example.retrofitandroidexample;
+package com.example.retrofitandroidexample.model;
 
 public class Currency {
     private boolean success;
