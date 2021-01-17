@@ -14,7 +14,9 @@ import com.example.retrofitandroidexample.model.Currency;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -52,7 +54,13 @@ public class MainActivity extends AppCompatActivity {
 //                "VND",
 //                "USD",
 //                1).enqueue(new Callback<Currency>() {
-        ApiService.apiServie.convertUsdToVnd1().enqueue(new Callback<Currency>() {
+//        ApiService.apiServie.convertUsdToVnd1().enqueue(new Callback<Currency>() {
+        Map<String, String> options = new HashMap<>();
+        options.put("access_key", "843d4d34ae72b3882e3db642c51e28e6");
+        options.put("currencies", "VND");
+        options.put("source", "USD");
+        options.put("format", "1");
+        ApiService.apiServie.convertUsdToVnd2(options).enqueue(new Callback<Currency>() {
             @Override
             public void onResponse(Call<Currency> call, Response<Currency> response) {
                 Toast.makeText(MainActivity.this, "Call Api Success", Toast.LENGTH_SHORT).show();
